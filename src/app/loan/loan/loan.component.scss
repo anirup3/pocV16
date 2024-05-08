@@ -1,0 +1,29 @@
+.form-group
+{
+  display: flex;
+  gap: 24px;
+}
+
+::ng-deep .p-dropdown-panel .p-dropdown-items {
+  padding: 0rem;
+  margin-bottom: 0rem;
+}
+
+::ng-deep .p-dropdown {
+  left: 14px;
+}
+// .ui-autocomplete-dd .ui-autocomplete-dropdown.ui-corner-all{
+//   position:absolute;
+//   transform: translateX(-100%);
+// }
+
+// .ui-autocomplete{
+//   width: 100% !important;
+// }
+//   .ui-autocomplete-input{
+//   width: 100% !important;
+// }
+
+::ng-deep .p-overlay{
+  background-color: aliceblue;
+}

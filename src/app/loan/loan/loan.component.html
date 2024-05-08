@@ -1,0 +1,116 @@
+<!-- <p>loan works!</p> -->
+
+
+<div class="container">
+  <h2>Loan Application form</h2>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" value="" placeholder="Enter name" name="name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Address:</label>
+      <div class="col-sm-10">
+        <Address>
+          <input type="text" class="form-control" [(ngModel)]="address" value="" id="address" placeholder="Enter Address" name="address" required="required">
+        </Address>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Contact:</label>
+      <div class="col-sm-10">
+        <input
+
+        type="number" name="contact" class="form-control" value="" size="4" maxlength="13" required="required" title=""
+
+        [(ngModel)]="contact"
+         min="0" id="validationCustom01" placeholder="Enter Contact">
+      </div>
+    </div>
+
+
+    <form [formGroup]="zipForm">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Country:</label>
+        <p-dropdown
+          formControlName="state"
+          [options]="stateOptions$ | async"
+          placeholder="Select State"
+        >
+        </p-dropdown>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">City:</label>
+        <p-dropdown
+          formControlName="county"
+          [options]="countyOptions$ | async"
+          placeholder="Select County"
+        >
+        </p-dropdown>
+      </div>
+    </form>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="name">Type of Loan</label>
+      <div class="col-sm-10">
+        <button type="button" class="btn btn-primary" (click)="openPopup()" data-toggle="modal" data-target="#exampleModalCenter">{{(selectedLoantype && selectedLoantype.length>0)?selectedLoantype:'Select'}}</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div> -->
+  </form>
+</div>
+
+
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Drag & Drop</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <app-drag-drop (updatedData)="getData($event)"></app-drag-drop>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

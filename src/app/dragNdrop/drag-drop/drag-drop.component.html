@@ -1,0 +1,59 @@
+<!-- <p>drag-drop works!</p> -->
+
+
+<!-- <div class="example-container">
+	<h2>Loan types</h2>
+
+	<div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list"
+	 (cdkDropListDropped)="drop($event)">
+		<div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+	</div>
+</div>
+<br>
+<div class="example-container">
+	<h2>Your Selected Loan type</h2>
+
+	<div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list"
+	 (cdkDropListDropped)="drop($event)">
+		<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+	</div>
+</div> -->
+
+<div #preview></div>
+
+<div  id="container">
+  <div  id="a">
+    <h2>Loan types</h2>
+
+    <div cdkDropList #todoList="cdkDropList"
+     [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list"
+    (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  <br>
+  <div  id="b">
+    <h2>Your Selected Loan type</h2>
+
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list"
+    (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container mt-3">
+  <h2>Horizontal Direction</h2>
+  <p>Use .flex-row to make the flex items appear side by side (default):</p>
+  <div class="d-flex flex-column">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <p>Use .flex-row-reverse to right-align the direction:</p>
+  <div class="d-flex flex-row-reverse">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+</div> -->
